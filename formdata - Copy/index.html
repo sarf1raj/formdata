@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form action="table">
+	
+	<center>
+		
+		<table border="4">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<td><input type="text" name="fname" id="fname"></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Last Name</th>
+					<td><input type="text" name="lname" id="lname"></td>
+				</tr>
+				<tr>
+					<th>Email</th>
+					<td><input type="text" name="email" id="email"></td>
+				</tr>
+				<tr>
+					<th>Age</th>
+					<td><input type="text" name="age" id="age"></td>
+				</tr>
+                <tr>
+                    <th>Website</th>
+					<td><input type="text" name="link" id="link"></td>
+                </tr>
+				<tr>
+                    <th>gender</th>
+					<td><input type="text" name="gender" id="gender"></td>
+                </tr>
+				<tr>
+                    <th>image</th>
+					<td><input class="file-upload-input" id="image" type="file" onchange="readURL(this)" accept="image/* " ></td>
+                </tr>
+				<tr id="btna">
+					<td colspan="2"><input type="button" name="button" id="btn" value="Add" onclick="AddRow()"></td>
+				</tr>
+				<tr id="btna">
+					<td colspan="2"><input type="reset" name="reset" id="btn"></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</form>
+
+		<table border="4" id="show">
+			<thead>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+					<th>Age</th>
+					<th>Website</th>
+					<th>gender</th>
+					<th>image</th>
+                    
+				</tr>
+			</thead>
+		</table>
+	</center>
+	
+	<script>
+		
+		var list1 = [];
+		var list2 = [];
+		var list3 = [];
+		var list4 = [];
+		var list5 = [];
+		var list6 = [];
+		var list7 = [ImageData];
+        
+
+
+        var n = 1;
+		var x = 0;
+
+		function AddRow(){
+
+			var AddRown = document.getElementById('show');
+			var NewRow = AddRown.insertRow(n);
+
+			list1[x] = document.getElementById("fname").value;
+			list2[x] = document.getElementById("lname").value;
+			list3[x] = document.getElementById("email").value;
+			list4[x] = document.getElementById("age").value;
+			list5[x] = document.getElementById("link").value;
+			list6[x] = document.getElementById("gender").value;
+			list7[x] = document.getElementById("image").value;
+			
+			
+			var cel1 = NewRow.insertCell(0);
+			var cel2 = NewRow.insertCell(1);
+			var cel3 = NewRow.insertCell(2);
+			var cel4 = NewRow.insertCell(3);
+			var cel5 = NewRow.insertCell(4);
+			var cel6 = NewRow.insertCell(5);
+			var cel7 = NewRow.insertCell(6);
+			
+			
+			
+           
+           
+
+
+			cel1.innerHTML = list1[x];
+			cel2.innerHTML = list2[x];
+			cel3.innerHTML = list3[x];
+			cel4.innerHTML = list4[x];
+			cel5.innerHTML = list5[x];
+			cel6.innerHTML = list6[x];
+			cel7.innerHTML = list7[x];
+		
+
+			
+		
+            
+            
+
+			n++;
+			x++;
+		}
+
+	</script>
+</body>
+</html>

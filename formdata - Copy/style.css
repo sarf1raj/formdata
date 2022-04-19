@@ -1,0 +1,21 @@
+table{
+	margin-top: 50px;
+	text-align: center;
+	background:  linear-gradient( to bottom right, rgb(45, 216, 122),rgb(210, 181, 53));
+	color: rgb(239, 242, 245);
+}
+body {
+    font-family: sans-serif;
+}
+body {
+    background-image: linear-gradient( to bottom right, rgb(51, 168, 176),rgb(210, 181, 53));
+}
+
+
+#show th, #show td{
+	padding: 10px;
+}
+
+#btna td input{
+	width: 100%;
+}
